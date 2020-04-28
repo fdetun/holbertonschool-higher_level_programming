@@ -1,11 +1,7 @@
 #!/usr/bin/python3
-i = 0
-j = 0
-for k in range(0, 45):
-    j = j + 1
-    print("{}{}".format(i, j), end=", ")
-    if j == 9:
-        i = i + 1
-        if i == 8:
-            print("{}{}".format(i, j))
-        j = i
+for i in range(0, 9):
+    for j in range(i + 1, 10):
+        if i != 8:
+            print("{:d}{:d}".format(i, j), end=', ')
+        else:
+            print("{:d}{:d}".format(i, j))
