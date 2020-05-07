@@ -1,8 +1,8 @@
-def search_replace(nl, search, replace):
-    my_list = nl[:]
-    for i in my_list:
-        if i == 2:
-            a = my_list.index(i)
-            my_list.remove(i)
-            my_list.insert(a, 98)
-    return (my_list)
+def search_replace(my_list, search, replace):
+    nl = my_list[:]
+    for i in nl:
+        if i == search:
+            a = nl.index(i)
+            nl.remove(i)
+            nl.insert(a, replace)
+    return (nl)
