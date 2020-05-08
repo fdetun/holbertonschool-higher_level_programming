@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 def best_score(a_dictionary):
     rslt = ""
-    if a_dictionary is None or a_dictionary is {}:
+    if a_dictionary is None or a_dictionary == {}:
         return None
     else:
         maxi = sorted(a_dictionary.values())
