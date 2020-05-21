@@ -16,11 +16,18 @@ class Square:
     def area(self):
         """ This is a new func! """
         a = self.__size
-        return (a / a)
+        return a ** 2
 
     @property
     def size(self):
         return self.__size
+
+    def my_print(self):
+        if self.__size == 0:
+            print()
+        else:
+            for i in range(0, self.__size):
+                print("{}".format(self.__size * "#"))
 
     @size.setter
     def size(self, value):
