@@ -13,9 +13,6 @@ class Square:
     def __init__(self, size=0):
         self.__size = size
 
-
-
-    
     def area(self):
         """ This is a new func! """
         return self.__size ** 2
@@ -23,7 +20,7 @@ class Square:
     @property
     def size(self):
         return self.__size
-
+        
     @size.setter
     def size(self, value):
         """This is a function.
