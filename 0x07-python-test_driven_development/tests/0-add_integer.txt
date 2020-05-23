@@ -15,6 +15,11 @@ tests:
 Traceback (most recent call last):
 TypeError: a must be an integer
 
+>>> add_integer(None, "Holberton")
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+
 >>> add_integer(1, )
 99
 
