@@ -23,7 +23,8 @@ def text_to_array(text):
             a = f + 1
     if text[:-1] not in delim:
         liss.append(text[a:len(text)])
-    new = filter(lambda ok: ok != "", liss)
+    fil = filter(lambda ok: ok != "", liss)
+    new = list(fil)
     return new
 
 
@@ -35,9 +36,15 @@ def text_indentation(text):
     Returns:
         None
     """
+    inc = 0
     if not type(text) is str:
         raise TypeError("text must be a string")
     liss = text_to_array(text)
     for i in liss:
-        print("{}".format(i.strip()))
-        print()
+        if inc < len(liss) - 1:
+            print("{}".format(i.strip()))
+            print()
+        else:
+            print("{}".format(i.strip()), end="")
+        inc = inc + 1
+        
