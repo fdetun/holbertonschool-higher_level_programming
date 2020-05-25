@@ -1,0 +1,17 @@
+The ``5-text_indentation`` module
+======================
+
+Using ``5-text_indentation``
+-------------------
+
+>>> text_indentation = __import__("5-text_indentation").text_indentation
+
+checks
+
+check1:
+    >>> text_indentation("""Foued is : here.""")
+    Foued is :
+    <BLANKLINE>
+    here.
+    <BLANKLINE>
+    
