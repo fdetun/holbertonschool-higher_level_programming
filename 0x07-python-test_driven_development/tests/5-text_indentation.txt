@@ -20,7 +20,7 @@ check 2:
     Foued is here
     <BLANKLINE>
 
-check 2:
+check 3:
     >>> text_indentation("""Foued is: here.again""")
     Foued is:
     <BLANKLINE>
@@ -29,4 +29,9 @@ check 2:
     again
     <BLANKLINE>
 
+check 4:
+    >>> text_indentation(7)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
     
