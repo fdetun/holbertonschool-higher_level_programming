@@ -41,4 +41,20 @@ check 5 :
     ...
     ZeroDivisionError: division by zero
 
+check 6 :
+    >>> matrix_divided(None, 3)
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+check 7 :
+    >>> matrix_divided(22, 7)
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+check 8 :
+    >>> matrix_divided([[]], 7)
+    [[]]
+
 
