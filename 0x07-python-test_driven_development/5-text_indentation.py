@@ -47,4 +47,3 @@ def text_indentation(text):
         else:
             print("{}".format(i.strip()), end="")
         inc = inc + 1
-        

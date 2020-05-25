@@ -13,12 +13,10 @@ check1:
     Foued is :
     <BLANKLINE>
     here.
-    <BLANKLINE>
 
 check 2:
     >>> text_indentation("""Foued is here""")
     Foued is here
-    <BLANKLINE>
 
 check 3:
     >>> text_indentation("""Foued is: here.again""")
@@ -27,7 +25,6 @@ check 3:
     here.
     <BLANKLINE>
     again
-    <BLANKLINE>
 
 check 4:
     >>> text_indentation(7)
