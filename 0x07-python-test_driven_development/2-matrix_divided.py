@@ -15,6 +15,7 @@ def matrix_divided(matrix, div):
     """
 
     checkType = [int, float]
+    a = "matrix must be a matrix (list of lists) of integers/floats"
     lenm = len(matrix[0])
     if not type(div) in checkType:
         raise TypeError("div must be a number")
@@ -23,7 +24,7 @@ def matrix_divided(matrix, div):
     for i in matrix:
         for j in i:
             if not type(j) in checkType:
-                raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+                raise TypeError(a)
         if len(i) != lenm:
             raise TypeError("Each row of the matrix must have the same size")
     rslt = [[a / div for a in row] for row in matrix]
