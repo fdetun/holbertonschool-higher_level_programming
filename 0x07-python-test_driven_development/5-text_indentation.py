@@ -20,6 +20,8 @@ def text_to_array(text):
         if text[f] in delim:
             liss.append(text[a:f + 1])
             a = f + 1
+    if text[:-1] not in delim and text[a + 1] != " ":
+        liss.append(text[a:len(text)])
     return liss
 
 
