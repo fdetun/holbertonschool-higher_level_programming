@@ -8,5 +8,5 @@ def lookup(obj):
     """
     lookup
     """
-    a = list(f for f in dir(obj))
+    a = list(dir(obj))
     return a
