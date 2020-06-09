@@ -13,7 +13,7 @@ class Base:
         id (int)
         """
         if id is not None:
-            self.id = int(id)
+            self.id = id
         else:
             Base.__nb_objects += 1
-            self.id = self.__nb_objects
+            self.id = Base.__nb_objects
