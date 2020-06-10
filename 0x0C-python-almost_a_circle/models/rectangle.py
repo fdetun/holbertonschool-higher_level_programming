@@ -90,3 +90,6 @@ class Rectangle(Base):
         """
         self.CheckSet("y", value)
         self.__y = value
+
+    def area(self):
+        return self.width * self.height
