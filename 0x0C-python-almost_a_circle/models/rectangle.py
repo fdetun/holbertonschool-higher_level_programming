@@ -12,10 +12,6 @@ class Rectangle(Base):
         id (int)
         """
         Base.__init__(self, id)
-        self.CheckSet("width", width)
-        self.CheckSet("height", height)
-        self.CheckSet("x", x)
-        self.CheckSet("y", y)
         self.width = width
         self.height = height
         self.x = x
@@ -96,4 +92,7 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
+        """
+        area function
+        """
         return self.width * self.height
