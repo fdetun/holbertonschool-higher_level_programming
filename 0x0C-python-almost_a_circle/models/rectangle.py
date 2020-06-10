@@ -116,6 +116,9 @@ class Rectangle(Base):
             self.id, self.x, self.y, self.width, self.height))
 
     def update(self, *args):
+        """
+        update function
+        """
         ar = ["id", "width", "height", "x", "y"]
         for i in range(len(args)):
             setattr(self, ar[i], args[i])
