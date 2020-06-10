@@ -17,6 +17,22 @@ class Rectangle(Base):
         self.x = x
         self.y = y
 
+    def CheckSet(self, var, value):
+        """
+        check Type Function
+        Args:
+        var
+        value
+        """
+        if type(value) is not int:
+            raise TypeError("{} must be an integer".format(var))
+        if var in ["widht", "height"]:
+            if value <= 0:
+                raise ValueError("{} must be > 0".format(var))
+        else:
+            if value < 0:
+                raise ValueError("{} must be >= 0".format(var))
+
     @property
     def width(self):
         """width getter
@@ -27,6 +43,7 @@ class Rectangle(Base):
     def width(self, value):
         """width setter function
         """
+        self.CheckSet("width", value)
         self.__width = value
 
     @property
@@ -41,6 +58,7 @@ class Rectangle(Base):
         """
         height setter function
         """
+        self.CheckSet("height", value)
         self.__height = value
 
     @property
@@ -55,6 +73,7 @@ class Rectangle(Base):
         """
         x setter function
         """
+        self.CheckSet("x", value)
         self.__x = value
 
     @property
@@ -69,4 +88,5 @@ class Rectangle(Base):
         """
         y setter function
         """
+        self.CheckSet("y", value)
         self.__y = value
