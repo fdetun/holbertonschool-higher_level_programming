@@ -101,7 +101,11 @@ class Rectangle(Base):
         """
         display function
         """
+        if self.y > 0:
+            print("\n" * self.y, end="")
         for i in range(self.height):
+            if self.x > 0:
+                print(" " * self.x, end="")
             print("#" * self.width)
 
     def __str__(self):
