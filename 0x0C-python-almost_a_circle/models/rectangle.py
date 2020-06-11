@@ -128,5 +128,8 @@ class Rectangle(Base):
                 setattr(self, key, value)
 
     def to_dictionary(self):
+        """
+        update dict
+        """
         arr = ["x", "y", "id", "height", "width"]
         return dict([(x, getattr(self, x)) for x in arr])
