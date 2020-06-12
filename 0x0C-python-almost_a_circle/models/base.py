@@ -20,5 +20,8 @@ class Base:
             self.id = Base.__nb_objects
 
     def to_json_string(list_dictionaries):
+        """
+        function return json string
+        """
         app_json = json.dumps(list_dictionaries)
         return app_json
