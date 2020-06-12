@@ -24,7 +24,7 @@ class Base:
         function return json string
         """
         if list_dictionaries is None:
-            fdetun = "{}".format("[]")
+            fdetun = "{}".format('"[]"')
         else:
             fdetun = json.dumps(list_dictionaries)
         return fdetun
