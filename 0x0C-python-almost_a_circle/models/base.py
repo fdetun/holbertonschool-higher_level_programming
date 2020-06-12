@@ -23,8 +23,8 @@ class Base:
         """
         function return json string
         """
-        if list_dictionaries is not None:
-            app_json = json.dumps(list_dictionaries)
+        if list_dictionaries is None:
+            fdetun = "{}".format("[]")
         else:
-            app_json = "{}".format("[]")
-        return app_json
+            fdetun = json.dumps(list_dictionaries)
+        return fdetun
