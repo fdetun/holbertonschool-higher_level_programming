@@ -26,5 +26,5 @@ class Base:
         if list_dictionaries is not None:
             app_json = json.dumps(list_dictionaries)
         else:
-            app_json = "[]"
+            app_json = "{}".format("[]")
         return app_json
