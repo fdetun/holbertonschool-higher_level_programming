@@ -23,7 +23,7 @@ class Base:
         """
         function return json string
         """
-        if not list_dictionaries is None:
+        if list_dictionaries is not None:
             app_json = json.dumps(list_dictionaries)
         else:
             app_json = "[]"
