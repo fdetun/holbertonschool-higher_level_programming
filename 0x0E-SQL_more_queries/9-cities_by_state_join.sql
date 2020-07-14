@@ -1,3 +1,3 @@
 -- join
 
-SELECT cities.id, cities.name, states.name FROM states JOIN cities ON cities.id = states.id ORDER BY cities.id;
+SELECT cities.id, cities.name, states.name FROM states JOIN cities ON states.id = cities.id ORDER BY cities.id;
