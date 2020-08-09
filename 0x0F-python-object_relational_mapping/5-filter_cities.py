@@ -23,7 +23,7 @@ def byfoued():
                  LIKE '{}' ORDER BY cities.id".format(sys.argv[4])
     cursor.execute(cmd)
     fd = cursor.fetchall()
-    l=", ".join(n[0] for n in fd)
+    l = ", ".join(n[0] for n in fd)
     print(l)
     cursor.close()
     fdb.close()
