@@ -20,9 +20,11 @@ def byfoued():
     cursor = fdb.cursor()
     cursor.execute(
         """SELECT * FROM states WHERE states.name LIKE 'N%' ORDER BY id ASC""")
-    for i in cursor:
+    fd = cursor.fetchall()
+    for i in fd:
         print(i)
-
+    cursor.close()
+    fdb.close()
 
 if __name__ == "__main__":
     byfoued()
