@@ -18,8 +18,9 @@ def byfoued():
                       db=sys.argv[3]
                       )
     cursor = fdb.cursor()
-    cmd = "SELECT * FROM states WHERE name LIKE BINARY '{}' ORDER BY id ASC".format(
-        sys.argv[4])
+    cmd = "SELECT * FROM states WHERE name \
+        LIKE BINARY'{}' ORDER BY id ASC".format(sys.argv[4])
+
     cursor.execute(cmd)
     fd = cursor.fetchall()
     for i in fd:
