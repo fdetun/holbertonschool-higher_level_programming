@@ -18,8 +18,8 @@ def byfoued():
                       db=sys.argv[3]
                       )
     cursor = fdb.cursor()
-    cursor.execute(
-        """SELECT * FROM states WHERE states.name LIKE 'N%' ORDER BY id ASC""")
+    cursor.execute("""SELECT * FROM states WHERE name
+              LIKE BINARY 'N%' ORDER BY id ASC""")
     fd = cursor.fetchall()
     for i in fd:
         print(i)
