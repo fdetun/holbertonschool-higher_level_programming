@@ -11,7 +11,6 @@ def byfoued():
     """
     function by foued
     """
-    s=set()
     fdb = mdb.connect(host='localhost',
                       port=3306,
                       user=sys.argv[1],
@@ -19,14 +18,13 @@ def byfoued():
                       db=sys.argv[3]
                       )
     cursor = fdb.cursor()
-    cmd = "SELECT cities.id,cities.name,states.name FROM cities join\
-    states on cities.state_id=states.id"
+    cmd = "SELECT cities.name FROM cities JOIN states ON\
+                 cities.state_id = states.id WHERE states.name \
+                 LIKE '{}' ORDER BY cities.id".format(sys.argv[4])
     cursor.execute(cmd)
     fd = cursor.fetchall()
-    for i in fd:
-        if i[2] == sys.argv[4]:
-            s.add(i[1])
-    print(", ".join(x for x in s))
+    l=", ".join(n[0] for n in fd)
+    print(l)
     cursor.close()
     fdb.close()
 
