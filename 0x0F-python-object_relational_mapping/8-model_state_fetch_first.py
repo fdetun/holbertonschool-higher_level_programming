@@ -16,6 +16,10 @@ if __name__ == "__main__":
     Session.configure(bind=engine)
     session = Session()
     for i in session.query(State).order_by(State.id).all():
-        print("{}: {}".format(i.id, i.name))
-        break
+        if i is None:
+            print("Nothing")
+            break
+        else:
+            print("{}: {}".format(i.id, i.name))
+            break
     session.close()
