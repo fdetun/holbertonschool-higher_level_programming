@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """fetchall"""
+
+
 from sqlalchemy import *
 import sys
 from model_state import Base, State
@@ -12,7 +14,6 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-    for i in session.query(State).order_by(State.id):
-        print(i.id, end=': ')
-        print(i.name)
+    for i in session.query(State).order_by(State.id).all():
+        print("{}: {}".format(i.id, i.name))
     session.close()
