@@ -1,3 +1,3 @@
 #!/bin/bash
 # methods
-curl -H "X-HolbertonSchool-User-Id: 98" "$1"
+curl -L -H"X-HolbertonSchool-User-Id: 98" "$1"
