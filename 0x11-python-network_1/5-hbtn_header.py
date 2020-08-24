@@ -5,5 +5,6 @@ import sys
 
 
 URL = sys.argv[1]
-r = requests.get(URL)
-print("{}".format(r.headers["X-Request-Id"]))
+s = requests.Session()
+r = s.get(URL)
+print("{}".format(r.headers.get('X-Request-Id')))
