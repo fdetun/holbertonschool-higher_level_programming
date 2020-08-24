@@ -7,4 +7,4 @@ import sys
 URL = sys.argv[1]
 s = requests.Session()
 r = s.get(URL)
-print(r.headers["X-Request-Id"])
+print("{}".format(r.headers["X-Request-Id"]))
