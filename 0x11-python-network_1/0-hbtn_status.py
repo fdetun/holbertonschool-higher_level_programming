@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""task 0""""
+"""task 0"""
 import urllib.request
 
 if __name__ == "__main__":
@@ -7,5 +7,5 @@ if __name__ == "__main__":
     html = resource.read()
     print("Body response:")
     print("\t- type: {}".format(html.__class__))
-    print("\t- content: {}".format(html.__class__))
+    print("\t- content: {}".format(html))
     print("\t- utf8 content: {}".format(html.decode("utf-8")))
