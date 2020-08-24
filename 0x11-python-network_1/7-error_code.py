@@ -8,3 +8,5 @@ if __name__ == "__main__":
     p = requests.get(URL)
     if p.status_code >= 400:
         print("Error code: {}".format(p.status_code))
+    else:
+        print(p.text)
