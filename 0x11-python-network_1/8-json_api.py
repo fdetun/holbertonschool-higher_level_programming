@@ -4,7 +4,7 @@ import requests
 import sys
 
 if __name__ == "__main__":
-    URL = "http://19.hbtn-cod.io:5000/search_user"
+    URL = "http://0.0.0.0:5000/search_user"
     ar = ""
     if sys.argv[1]:
         ar = sys.argv[1]
