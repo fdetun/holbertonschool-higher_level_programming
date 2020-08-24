@@ -4,16 +4,16 @@ import requests
 import sys
 
 if __name__ == "__main__":
-    URL = "http://0.0.0.0:5000/search_user"
+    URL = "http://19.hbtn-cod.io:5000/search_user"
     ar = ""
     if sys.argv[1]:
         ar = sys.argv[1]
     p = requests.post(URL, {"q": ar})
     try:
         f = p.json()
-        if len(f) == 0:
-            print("No result")
+        if f:
+            print("[{}] {}".format(f.get("id"), f.get("name")))
         else:
-            print("[{}] {}".format(p.json().get("id"), p.json().get("name")))
+            print("No result")
     except ValueError:
         print("Not a valid JSON")
