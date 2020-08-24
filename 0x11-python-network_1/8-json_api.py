@@ -14,6 +14,6 @@ if __name__ == "__main__":
         if len(f) == 0:
             print("No result")
         else:
-            print("[{}] {}".format(f["id"], f["name"]))
+            print("[{}] {}".format(f.get("id"), f.get("name")))
     except ValueError:
         print("Not a valid JSON")
