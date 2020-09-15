@@ -1,7 +1,7 @@
 #!/usr/bin/node
-while (true) {
-  console.log('C is fun');
-  console.log('Python is cool');
-  console.log('Javascript is amazing');
-  break;
+const ln = ['C is fun', 'Python is cool', 'Javascript is amazing'];
+let i = 0;
+while (i < ln.length) {
+  console.log(ln[i]);
+  i++;
 }
