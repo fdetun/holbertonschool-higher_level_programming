@@ -1,7 +1,7 @@
 #!/usr/bin/node
 let i = 2;
 const arr = [];
-if (process.argv.length === 3) {
+if (process.argv.length <= 3) {
   console.log(0);
 } else {
   while (i < process.argv.length) {
