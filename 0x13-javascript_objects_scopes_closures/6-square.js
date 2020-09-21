@@ -12,8 +12,8 @@ module.exports = class Square extends a {
       this.print();
     } else {
       let i = 0;
-      while (i < this.fde) {
-        console.log(a.repeat(this.fde));
+      while (i < this.height) {
+        console.log(a.repeat(this.width));
         i++;
       }
     }
