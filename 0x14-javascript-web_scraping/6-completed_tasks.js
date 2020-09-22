@@ -16,9 +16,8 @@ request(options, (err, reponse, body) => {
     dt[j] = 0;
   }
   for (const cn of JSON.parse(body)) {
-    const j = cn.userId;
     if (cn.completed) {
-      dt[j] = dt[j] + 1;
+      dt[cn.userId] = dt[cn.userId] + 1;
     }
   }
 
