@@ -2,8 +2,8 @@
 
 const fde = require('fs');
 
-fde.readFile('cisfun', 'utf8', function (error, datas) {
-  if (data) {
+fde.readFile(process.argv[2], 'utf8', function (error, datas) {
+  if (datas) {
     console.log(datas);
   } else {
     console.log(error);
