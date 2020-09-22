@@ -10,5 +10,5 @@ request(options, (err, reponse) => {
   if (err) {
     return console.log(err);
   }
-  console.log(reponse.statusCode);
+  console.log('code: ' + reponse.statusCode);
 });
