@@ -2,7 +2,7 @@
 const request = require('request');
 let sum = 0;
 const options = {
-  url: process.argv[2] + '/?format=json',
+  url: process.argv[2],
   method: 'GET'
 };
 
