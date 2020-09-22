@@ -2,7 +2,7 @@
 const request = require('request');
 let sum = 0;
 const options = {
-  url: 'https://swapi-api.hbtn.io/api/films/?format=json',
+  url: process.argv[2] + '/?format=json',
   method: 'GET'
 };
 
