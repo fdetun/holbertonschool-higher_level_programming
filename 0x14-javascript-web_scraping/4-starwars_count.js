@@ -1,6 +1,6 @@
 #!/usr/bin/node
 const request = require('request');
-var sum = 0;
+let sum = 0;
 const options = {
   url: 'https://swapi-api.hbtn.io/api/films/?format=json',
   method: 'GET'
