@@ -13,7 +13,7 @@ request(options, (err, reponse, body) => {
   }
   for (const cn of JSON.parse(body)) {
     if (cn.completed) {
-      dt[cn.userId] = (dt[cn.userId] || 0) + 1; +1;
+      dt[cn.userId] = (dt[cn.userId] || 0) + 1;
     }
   }
 
