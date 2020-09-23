@@ -11,7 +11,7 @@ request(options, (err, reponse, body) => {
     return console.log(err);
   }
   for (const cn of JSON.parse(body).characters) {
-    let nl = {
+    const nl = {
       url: cn + '?format=json',
       method: 'GET'
     };
